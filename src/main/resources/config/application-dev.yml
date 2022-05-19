@@ -31,14 +31,22 @@ spring:
     serialization:
       indent-output: true
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: system
-    password: oracle
+    url: jdbc:oracle:thin:@10.0.2.15:1521:ORCL
+    username: orcluser
+    password: orcluser
+    driver-class-name: oracle.jdbc.OracleDriver
     hikari:
-      poolName: Hikari
-      auto-commit: false
+      maxLifetime: '2000000'
+      poolName: HikariPool
+      connectionTimeout: '30000'
+      minimumIdle: '5'
+      idleTimeout: '30000'
+      maximumPoolSize: '20'
   jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.Oracle12cDialect
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
