@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091751",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "productName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "unit",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "supplier",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "supplier",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "category",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "orderDetails",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "orderDetails",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

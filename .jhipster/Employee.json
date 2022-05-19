@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091748",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "employee",
+  "fields": [
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Employee",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

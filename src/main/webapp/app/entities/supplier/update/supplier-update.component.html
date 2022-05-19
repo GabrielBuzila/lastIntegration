@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-supplier-heading" data-cy="SupplierCreateUpdateHeading">Create or edit a Supplier</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_supplierName">Supplier Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="supplierName"
+            id="field_supplierName"
+            data-cy="supplierName"
+            formControlName="supplierName"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_contactName">Contact Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="contactName"
+            id="field_contactName"
+            data-cy="contactName"
+            formControlName="contactName"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_address">Address</label>
+          <input type="text" class="form-control" name="address" id="field_address" data-cy="address" formControlName="address" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_city">City</label>
+          <input type="text" class="form-control" name="city" id="field_city" data-cy="city" formControlName="city" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_postalCode">Postal Code</label>
+          <input
+            type="text"
+            class="form-control"
+            name="postalCode"
+            id="field_postalCode"
+            data-cy="postalCode"
+            formControlName="postalCode"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_country">Country</label>
+          <input type="text" class="form-control" name="country" id="field_country" data-cy="country" formControlName="country" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_phone">Phone</label>
+          <input type="text" class="form-control" name="phone" id="field_phone" data-cy="phone" formControlName="phone" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

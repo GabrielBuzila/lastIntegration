@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091750",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "orderDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Order",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "customer",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "employee",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "shipper",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "shipper",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

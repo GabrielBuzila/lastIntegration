@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091753",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "supplier",
+  "fields": [
+    {
+      "fieldName": "supplierName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Supplier",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

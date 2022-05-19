@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="supplier">
+      <h2 data-cy="supplierDetailsHeading"><span>Supplier</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ supplier.id }}</span>
+        </dd>
+        <dt><span>Supplier Name</span></dt>
+        <dd>
+          <span>{{ supplier.supplierName }}</span>
+        </dd>
+        <dt><span>Contact Name</span></dt>
+        <dd>
+          <span>{{ supplier.contactName }}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+          <span>{{ supplier.address }}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+          <span>{{ supplier.city }}</span>
+        </dd>
+        <dt><span>Postal Code</span></dt>
+        <dd>
+          <span>{{ supplier.postalCode }}</span>
+        </dd>
+        <dt><span>Country</span></dt>
+        <dd>
+          <span>{{ supplier.country }}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+          <span>{{ supplier.phone }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/supplier', supplier.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

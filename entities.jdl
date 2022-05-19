@@ -1,0 +1,77 @@
+
+entity Category {
+	categoryName String
+    description String
+}
+
+entity Employee {
+	lastName String
+    firstName String
+    photo String
+    notes String
+}
+
+entity OrderDetails {
+    quantity Long
+}
+
+entity Order {
+    orderDate LocalDate
+}
+
+entity Product {
+	productName String
+    unit Long
+    price Double
+}
+
+entity Shipper {
+	shipperName String
+	phone String
+}
+
+entity Supplier {
+	supplierName String
+    contactName String
+    address String
+    city String
+    postalCode String
+    country String
+	phone String
+}
+
+entity Customer {
+	customerName String
+    contactName String
+    address String
+    city String
+    postalCode String
+    country String
+}
+
+relationship OneToOne {
+	OrderDetails{order} to Order
+}
+
+relationship OneToMany {
+	OrderDetails{product} to Product
+}
+
+relationship ManyToOne {
+	Order{customer} to Customer
+}
+
+relationship ManyToOne {
+	Order{employee} to Employee
+}
+
+relationship ManyToOne {
+	Order{shipper} to Shipper
+}
+
+relationship ManyToOne {
+	Product{supplier} to Supplier
+}
+relationship ManyToOne {
+	Product{category} to Category
+}

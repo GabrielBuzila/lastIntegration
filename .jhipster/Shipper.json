@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091752",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "shipper",
+  "fields": [
+    {
+      "fieldName": "shipperName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Shipper",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

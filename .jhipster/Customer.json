@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220519091754",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Customer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
